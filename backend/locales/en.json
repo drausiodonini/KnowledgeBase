@@ -1,0 +1,15 @@
+{
+    "name-not-reported": "Name not reported",
+    "description-not-reported": "Description not reported",
+    "category-not-reported": "Category not reported",
+    "author-not-reported": "Author not reported",
+    "content-not-reported": "Content not reported",
+    "email-not-reported": "E-mail not reported",
+    "password-not-reported": "Password not reported",
+    "invalid-password-validation": "Invalid password validation",
+    "passwords-do-not-match": "Passwords do not match",
+    "user-already-registered": "User already registered",
+    "user-has-articles": "User has articles",
+    "user-not-found": "User not found",
+    "article-not-found": "Article not found"
+}

@@ -1,0 +1,15 @@
+{
+    "name-not-reported" : "Nome não informado",
+    "description-not-reported": "Descrição não informada",
+    "category-not-reported": "Categoria não informada",
+    "author-not-reported": "Autor não informado",
+    "content-not-reported": "Conteúdo não informado",
+    "email-not-reported": "E-Mail não informado",
+    "password-not-reported": "Senha não informada",
+    "invalid-password-validation": "Confirmação de senha inválida",
+    "passwords-do-not-match": "Senhas não conferem",
+    "user-already-registered": "Usuário já cadastrado",
+    "user-has-articles": "Usuário possui artigos",
+    "user-not-found": "Usuário não foi encontrado!",
+    "article-not-found": "Artigo não foi encontrado"
+}
