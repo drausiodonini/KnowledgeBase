@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Toasted from 'vue-toasted'
 
 Vue.use(Toasted, {
-	iconpack: 'fontawesome',
+	iconPack: 'fontawesome',
 	duration: 3000
 })
 
@@ -12,7 +12,7 @@ Vue.toasted.register(
 	{ type: 'success', icon: 'check' }
 )
 
-Vue.toated.register(
+Vue.toasted.register(
 	'defaultError',
 	data => !data.msg ? 'Ops! Erro inisperado' : data.msg,
 	{ type: 'error', icon: 'times' }
