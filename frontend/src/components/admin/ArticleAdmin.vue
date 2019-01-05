@@ -121,10 +121,9 @@ export default {
             });
         },
         loadArticle(article, mode = "save") {
-            this.mode = mode;
-            axios
-                .get(`${baseApiUrl}/articles/${article.id}`)
-                .then(res => (this.article = res.data))
+			const url = `${baseApiUrl}/articles/${article.id}`
+			this.mode = mode;
+            axios.get(url).then(res => (this.article = res.data))
                 .catch(showError);
         },
         reset() {
@@ -134,8 +133,9 @@ export default {
         },
         save() {
             const method = this.article.id ? "put" : "post";
-            const id = this.article.id ? `/${this.article.id}` : "";
-            axios[method](`${baseApiUrl}/articles${id}`, this.article)
+			const id = this.article.id ? `/${this.article.id}` : "";
+			const url = `${baseApiUrl}/articles${id}`
+            axios[method](url, this.article)
                 .then(() => {
                     this.$toasted.global.defaultSuccess();
                     this.reset();
@@ -143,9 +143,10 @@ export default {
                 .catch(showError);
         },
         remove() {
-            const id = this.article.id;
+			const id = this.article.id;
+			const url = `${baseApiUrl}/article/${id}`
             axios
-                .delete(`${baseApiUrl}/article/${id}`)
+                .delete(url)
                 .then(() => {
                     this.$toasted.global.defaultSuccess();
                     this.reset();
