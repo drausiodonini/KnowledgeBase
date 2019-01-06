@@ -1,8 +1,6 @@
 <template>
     <div class="auth-content">
         <div class="auth-modal">
-            <!-- <img src="@/assets/logo.png" width="200" alt="logo">
-            <hr>-->
             <div class="login-wrap">
                 <div class="login-html">
                     <input id="tab-1" type="radio" name="tab" class="sign-in" value="signin" v-model="checked">
@@ -13,11 +11,11 @@
                         <div class="sign-in-htm">
                             <div class="group">
                                 <label for="user" class="label">Email Address</label>
-                                <input id="user" type="text" class="input" v-model="user.email">
+                                <input id="sign-in-email" type="text" class="input" v-model="user.email">
                             </div>
                             <div class="group">
                                 <label for="pass" class="label">Password</label>
-                                <input id="pass" type="password" class="input" data-type="password" v-model="user.password">
+                                <input id="sign-in-pass" type="password" class="input" data-type="password" v-model="user.password">
                             </div>
                             <div class="group">
                                 <input id="check" type="checkbox" class="check" checked v-model="keepSigned">
@@ -40,15 +38,15 @@
                             </div>
                             <div class="group">
                                 <label for="pass" class="label">Email Address</label>
-                                <input id="pass" type="text" class="input" v-model="user.email">
+                                <input id="sign-up-email" type="text" class="input" v-model="user.email">
                             </div>
                             <div class="group">
                                 <label for="pass" class="label">Password</label>
-                                <input id="pass" type="password" class="input" data-type="password" v-model="user.password">
+                                <input id="sign-up-pass" type="password" class="input" data-type="password" v-model="user.password">
                             </div>
                             <div class="group">
                                 <label for="pass" class="label">Repeat Password</label>
-                                <input id="pass" type="password" class="input" data-type="password" v-model="user.confirmPassword">
+                                <input id="sign-up-conf-pass" type="password" class="input" data-type="password" v-model="user.confirmPassword">
                             </div>
                             <div class="group">
                                 <input type="submit" class="button" value="Sign Up" @click="signup">
@@ -96,7 +94,6 @@ export default {
 				.then(() => {
 					this.$toasted.global.defaultSuccess()
 					this.checked = "signin"
-					// this.user = {}
 					this.showSignup = false
 				})
 				.catch(showError)
@@ -109,10 +106,8 @@ export default {
 .auth-content {
     margin: 0;
     color: #6a6f8c;
-    /* background: #c8c8c8; */
     font: 600 16px/18px "Open Sans", sans-serif;
 }
-/* *, */
 :after,
 :before {
     box-sizing: border-box;
@@ -207,7 +202,7 @@ a {
     background: rgba(255, 255, 255, 0.1);
 }
 .login-form .group input[data-type="password"] {
-    text-security: circle;
+    /* text-security: circle; */
     -webkit-text-security: circle;
 }
 .login-form .group .label {
